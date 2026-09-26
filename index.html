@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inspire Ventures (SMC-Private) Limited — innovative IT, technology, security, digital and business solutions.">
+  <meta name="theme-color" content="#0b63ce">
+  <title>Inspire Ventures | Technology & Business Solutions</title>
+  <style>
+    :root{
+      --blue:#0b63ce; --dark:#0b172a; --text:#334155; --light:#f6f9fd;
+      --line:#e5eaf1; --white:#fff; --accent:#16a3ff;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.6;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    nav{height:74px;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--dark);font-size:21px}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,#0874e8,#0a3c86);display:grid;place-items:center;color:white;font-weight:900;letter-spacing:-2px;box-shadow:0 8px 20px rgba(11,99,206,.2)}
+    .navlinks{display:flex;gap:27px;font-size:14px;font-weight:600;color:#475569}
+    .navlinks a:hover{color:var(--blue)}
+    .menu{display:none;border:0;background:none;font-size:26px}
+    .hero{background:radial-gradient(circle at 85% 20%,rgba(22,163,255,.17),transparent 28%),linear-gradient(135deg,#07152c,#0b3972 65%,#0b63ce);color:#fff;padding:92px 0 86px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+    .eyebrow{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);padding:7px 13px;border-radius:30px;font-size:13px;margin-bottom:20px}
+    h1{font-size:clamp(42px,6vw,70px);line-height:1.02;letter-spacing:-2px;margin-bottom:22px}
+    .hero p{font-size:18px;color:#dcecff;max-width:650px}
+    .buttons{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:13px 21px;border-radius:10px;font-weight:700}
+    .btn-primary{background:#fff;color:#0755b8}
+    .btn-outline{border:1px solid rgba(255,255,255,.5);color:#fff}
+    .hero-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:24px;padding:30px;box-shadow:0 25px 60px rgba(0,0,0,.18)}
+    .hero-card h3{font-size:24px;margin-bottom:10px}
+    .hero-card p{font-size:15px}
+    .mini-list{margin-top:20px;display:grid;gap:12px}
+    .mini-list div{display:flex;gap:10px;align-items:center;font-size:14px;color:#e8f3ff}
+    .check{width:22px;height:22px;border-radius:50%;background:#fff;color:#0b63ce;display:grid;place-items:center;font-size:12px;font-weight:900}
+    section{padding:82px 0}
+    .section-head{text-align:center;max-width:720px;margin:0 auto 44px}
+    .section-head span{color:var(--blue);font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px}
+    .section-head h2{font-size:38px;line-height:1.15;color:var(--dark);margin:9px 0 13px}
+    .section-head p{color:#64748b}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}
+    .about-box{background:var(--light);padding:36px;border-radius:22px;border:1px solid var(--line)}
+    .about-box h3{font-size:25px;color:var(--dark);margin-bottom:13px}
+    .about p{margin-bottom:14px}
+    .facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}
+    .fact{background:#fff;border:1px solid var(--line);padding:18px;border-radius:14px}
+    .fact strong{display:block;color:var(--dark);font-size:20px}
+    .services{background:var(--light)}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:27px;transition:.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 16px 35px rgba(15,23,42,.08)}
+    .icon{width:48px;height:48px;border-radius:13px;background:#eaf4ff;color:var(--blue);display:grid;place-items:center;font-size:23px;margin-bottom:18px}
+    .card h3{color:var(--dark);font-size:19px;margin-bottom:8px}
+    .card p{font-size:14px;color:#64748b}
+    .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .why{text-align:center;padding:25px 15px}
+    .why strong{display:block;color:var(--dark);margin:10px 0 5px}
+    .cta{background:linear-gradient(135deg,#0b63ce,#083b80);color:#fff;border-radius:26px;padding:52px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+    .cta h2{font-size:34px;line-height:1.15;margin-bottom:8px}
+    .cta p{color:#dcecff}
+    .contact{display:grid;grid-template-columns:.9fr 1.1fr;gap:25px}
+    .contact-card{background:var(--light);border:1px solid var(--line);border-radius:20px;padding:30px}
+    .contact-card h3{color:var(--dark);margin-bottom:18px;font-size:23px}
+    .contact-item{padding:14px 0;border-bottom:1px solid var(--line)}
+    .contact-item:last-child{border-bottom:0}
+    .contact-item small{display:block;color:#64748b}
+    .contact-item strong{color:var(--dark)}
+    form{display:grid;gap:14px}
+    input,textarea{width:100%;border:1px solid #d8e0ea;border-radius:10px;padding:13px;font:inherit;outline:none;background:#fff}
+    input:focus,textarea:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(11,99,206,.08)}
+    textarea{min-height:145px;resize:vertical}
+    .submit{border:0;cursor:pointer;background:var(--blue);color:#fff;padding:13px;border-radius:10px;font-weight:800}
+    footer{background:#07152c;color:#b9c9dd;padding:30px 0}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .footer-brand{color:#fff;font-weight:800}
+    .muted{font-size:13px}
+    @media(max-width:850px){
+      .navlinks{display:none}.menu{display:block}
+      .hero-grid,.about,.contact{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr 1fr}
+      .cta{display:block;padding:36px}.cta .btn{margin-top:22px}
+    }
+    @media(max-width:560px){
+      .cards,.why-grid{grid-template-columns:1fr}.hero{padding:65px 0}.hero-card{padding:23px}
+      section{padding:62px 0}.section-head h2{font-size:31px}.footer-row{display:block}
+      .footer-row>*{margin-bottom:8px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#home"><span class="logo">IV</span><span>Inspire Ventures</span></a>
+      <div class="navlinks">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
+      </div>
+      <button class="menu" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">INSPIRE VENTURES (SMC-PRIVATE) LIMITED</span>
+      <h1>Inspiring Ideas.<br>Building Solutions.</h1>
+      <p>Innovative IT, technology, security, digital and business solutions designed to help organizations work smarter, operate efficiently and grow with confidence.</p>
+      <div class="buttons">
+        <a class="btn btn-primary" href="#services">Explore Services</a>
+        <a class="btn btn-outline" href="#contact">Get in Touch</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <h3>Technology that moves business forward.</h3>
+      <p>From IT infrastructure and security systems to digital solutions, design and business support, we bring practical services together under one roof.</p>
+      <div class="mini-list">
+        <div><span class="check">✓</span> IT & Technology Solutions</div>
+        <div><span class="check">✓</span> Security & CCTV Solutions</div>
+        <div><span class="check">✓</span> Networking & Hardware</div>
+        <div><span class="check">✓</span> Design, Printing & Stationery</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about">
+    <div>
+      <div class="section-head" style="text-align:left;margin:0 0 25px">
+        <span>About Us</span>
+        <h2>Practical solutions for modern businesses.</h2>
+      </div>
+      <p><strong>Inspire Ventures (SMC-Private) Limited</strong> is a Pakistan-based technology and business solutions company focused on delivering reliable, practical and innovative services for organizations and businesses.</p>
+      <p>We combine technology, security, digital services and business support to help clients simplify their operations and build dependable working environments.</p>
+      <p>Our approach is built around quality, professionalism, responsive support and long-term business relationships.</p>
+    </div>
+    <div class="about-box">
+      <h3>Our Focus</h3>
+      <p>Understanding client requirements and delivering solutions that are efficient, scalable and aligned with business needs.</p>
+      <div class="facts">
+        <div class="fact"><strong>IT</strong><span>Technology & digital solutions</span></div>
+        <div class="fact"><strong>Security</strong><span>CCTV & security systems</span></div>
+        <div class="fact"><strong>Business</strong><span>Operational support solutions</span></div>
+        <div class="fact"><strong>Design</strong><span>Creative & print services</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head">
+      <span>What We Do</span>
+      <h2>Our Services</h2>
+      <p>A broad range of solutions for technology, security, digital work and business operations.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><div class="icon">▣</div><h3>IT Solutions</h3><p>Computer systems, software, office technology and practical IT support for businesses.</p></div>
+      <div class="card"><div class="icon">◉</div><h3>CCTV & Security</h3><p>CCTV cameras, recording systems, access control and related security solutions.</p></div>
+      <div class="card"><div class="icon">⌁</div><h3>Networking</h3><p>Networking equipment, structured cabling and connectivity solutions for workplaces.</p></div>
+      <div class="card"><div class="icon">▤</div><h3>Hardware & Software</h3><p>Technology products and software solutions selected around business requirements.</p></div>
+      <div class="card"><div class="icon">✦</div><h3>Graphic Designing</h3><p>Professional business graphics, promotional materials and visual design services.</p></div>
+      <div class="card"><div class="icon">▥</div><h3>Printing & Stationery</h3><p>Business stationery, printing and related supplies for day-to-day operations.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="container">
+    <div class="section-head"><span>Our Approach</span><h2>Built around your needs.</h2><p>We focus on clear communication, practical implementation and dependable service.</p></div>
+    <div class="why-grid">
+      <div class="why"><div class="icon" style="margin:auto">✓</div><strong>Quality Focus</strong><span>Solutions selected with reliability in mind.</span></div>
+      <div class="why"><div class="icon" style="margin:auto">◆</div><strong>Professional Service</strong><span>Organized and business-focused delivery.</span></div>
+      <div class="why"><div class="icon" style="margin:auto">↗</div><strong>Practical Innovation</strong><span>Technology applied to real business needs.</span></div>
+      <div class="why"><div class="icon" style="margin:auto">∞</div><strong>Long-Term Support</strong><span>Focused on lasting business relationships.</span></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta">
+      <div><h2>Have a project in mind?</h2><p>Let's discuss the technology or business solution you need.</p></div>
+      <a class="btn btn-primary" href="#contact">Contact Inspire Ventures</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="section-head"><span>Contact</span><h2>Let's connect.</h2><p>Reach out for business inquiries, service requirements and project discussions.</p></div>
+    <div class="contact">
+      <div class="contact-card">
+        <h3>Inspire Ventures</h3>
+        <div class="contact-item"><small>Email</small><strong><a href="mailto:azharabbasii064@gmail.com">azharabbasii064@gmail.com</a></strong></div>
+        <div class="contact-item"><small>Phone / WhatsApp</small><strong><a href="https://wa.me/923408951761">+92 340 8951761</a></strong></div>
+        <div class="contact-item"><small>Location</small><strong>Islamabad, Pakistan</strong></div>
+        <div class="contact-item"><small>Website</small><strong>inspireventures.pk</strong></div>
+      </div>
+      <div class="contact-card">
+        <h3>Send an Inquiry</h3>
+        <form onsubmit="sendMail(event)">
+          <input id="name" type="text" placeholder="Your name" required>
+          <input id="email" type="email" placeholder="Your email" required>
+          <input id="subject" type="text" placeholder="Subject" required>
+          <textarea id="message" placeholder="Tell us about your requirement..." required></textarea>
+          <button class="submit" type="submit">Send Inquiry</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-row">
+    <div class="footer-brand">Inspire Ventures (SMC-Private) Limited</div>
+    <div class="muted">© <span id="year"></span> Inspire Ventures. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  const n=document.querySelector('.navlinks');
+  if(n.style.display==='flex'){n.style.display='none';}
+  else{n.style.display='flex';n.style.position='absolute';n.style.top='74px';n.style.left='0';n.style.right='0';n.style.background='#fff';n.style.padding='20px';n.style.flexDirection='column';n.style.borderBottom='1px solid #e5eaf1';}
+}
+function sendMail(e){
+  e.preventDefault();
+  const name=document.getElementById('name').value;
+  const email=document.getElementById('email').value;
+  const subject=document.getElementById('subject').value;
+  const message=document.getElementById('message').value;
+  const body=encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+  window.location.href=`mailto:azharabbasii064@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+}
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
