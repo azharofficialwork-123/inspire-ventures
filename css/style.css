@@ -75,16 +75,17 @@ section{padding:95px 0}.soft{background:var(--soft)}.section-head{max-width:740p
 /* Header background image */
 .header {
   background-image: url("../assets/headerpic.jpg");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Navigation on right + white text */
+/* Navigation on right */
 .header .nav {
   justify-content: flex-end;
 }
 
+/* White navigation text */
 .header .links a {
   color: #fff;
 }
@@ -92,7 +93,4 @@ section{padding:95px 0}.soft{background:var(--soft)}.section-head{max-width:740p
 .header .links a:hover,
 .header .links a.active {
   color: #fff;
-}
-.header .nav {
-  justify-content: flex-end;
 }
