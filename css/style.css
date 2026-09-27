@@ -74,14 +74,17 @@ section{padding:95px 0}.soft{background:var(--soft)}.section-head{max-width:740p
 }
 /* Header background image */
 .header {
+  position: relative;
+  height: 180px;
   background-image: url("../assets/headerpic.jpg");
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-/* Navigation on right */
+/* Navigation */
 .header .nav {
+  height: 180px;
   justify-content: flex-end;
 }
 
