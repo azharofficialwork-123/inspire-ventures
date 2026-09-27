@@ -115,3 +115,6 @@ section{padding:95px 0}.soft{background:var(--soft)}.section-head{max-width:740p
     color: #fff;
   }
 }
+.header .nav {
+  justify-content: flex-end;
+}
