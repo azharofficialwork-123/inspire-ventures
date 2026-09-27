@@ -15,46 +15,60 @@ section{padding:95px 0}.soft{background:var(--soft)}.section-head{max-width:740p
 @media(max-width:620px){.topbar .row{display:block}.topbar .row span:last-child{display:none}.hero{padding:66px 0}.hero h1{letter-spacing:-2.4px}.hero-photo,.hero-photo img{min-height:350px;height:350px}.cards,.industries,.gallery,.stats,.footer-grid{grid-template-columns:1fr}.case.tall{min-height:330px}section{padding:72px 0}.footer-bottom{display:block}.footer-bottom>*{margin-bottom:8px}.facts{grid-template-columns:1fr}.profile-photo{width:270px}}
 /* Certificates & Registration */
 .certificates {
-  padding: 80px 0;
-  background: #f8fafc;
+  padding: 70px 0;
+  background: #fff;
 }
 
 .certificate-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  max-width: 1000px;
-  margin: 40px auto 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  max-width: 1050px;
+  margin: 35px auto 0;
 }
 
 .certificate-grid a {
   display: block;
   background: #fff;
-  padding: 12px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,.08);
-  transition: .25s ease;
+  padding: 7px;
+  border: 1px solid #d9dee7;
+  border-radius: 3px;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .certificate-grid a:hover {
   transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(0,0,0,.12);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.14);
 }
 
 .certificate-grid img {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 210 / 297;
+  height: 360px;
   object-fit: contain;
   background: #fff;
 }
 
+/* Tablet */
+@media (max-width: 900px) {
+  .certificate-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .certificate-grid img {
+    height: 380px;
+  }
+}
+
 /* Mobile */
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .certificate-grid {
     grid-template-columns: 1fr;
-    gap: 25px;
+    max-width: 420px;
+  }
+
+  .certificate-grid img {
+    height: auto;
   }
 }
