@@ -76,8 +76,6 @@ section{padding:95px 0}.soft{background:var(--soft)}.section-head{max-width:740p
 .header {
   position: relative;
   height: 180px;
-  background-image: url("../assets/headerpic.jpg");
-  background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -94,6 +92,133 @@ section{padding:95px 0}.soft{background:var(--soft)}.section-head{max-width:740p
 }
 
 .header .links a:hover,
+
+/* ===== SIMPLE RESPONSIVE HEADER ===== */
+
+.header {
+  position: relative;
+  top: auto;
+  height: auto;
+  background: #ffffff;
+  background-image: none;
+  border-bottom: 1px solid #e5eaf1;
+  backdrop-filter: none;
+}
+
+.header .nav {
+  min-height: 95px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+/* Logo + Company Name */
+.header .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #0b172a;
+  flex-shrink: 0;
+}
+
+.header .brand img {
+  width: 68px;
+  height: 68px;
+  object-fit: contain;
+}
+
+.header .company-name h2 {
+  margin: 0;
+  color: #0755a5;
+  font-size: 28px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.header .company-name span {
+  display: block;
+  margin-top: 4px;
+  color: #64748b;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Navigation */
+.header .links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.header .links a {
+  color: #334155;
+}
+
+.header .links a:hover,
+.header .links a.active {
+  color: #0b63ce;
+}
+
+/* Mobile */
+@media (max-width: 950px) {
+
+  .header .nav {
+    min-height: 80px;
+  }
+
+  .header .brand img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .header .company-name h2 {
+    font-size: 21px;
+  }
+
+  .header .company-name span {
+    font-size: 11px;
+  }
+
+  .header .links {
+    display: none;
+  }
+
+  .header .menu {
+    display: block;
+    color: #0b172a;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .header .nav {
+    min-height: 72px;
+    gap: 10px;
+  }
+
+  .header .brand {
+    gap: 8px;
+  }
+
+  .header .brand img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .header .company-name h2 {
+    font-size: 18px;
+  }
+
+  .header .company-name span {
+    font-size: 9px;
+  }
+
+  .header .menu {
+    font-size: 25px;
+  }
+}
 .header .links a.active {
   color: #fff;
 }
